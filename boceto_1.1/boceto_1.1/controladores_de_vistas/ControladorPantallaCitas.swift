@@ -9,10 +9,10 @@ import UIKit
 
 
 class ControladorPantallaCitas: UIViewController {
-
     @IBOutlet weak var nombre_de_quien_lo_dijo: UILabel!
-    
     @IBOutlet weak var que_dijo_muro_texto: UILabel!
+    
+
     var cita_actual: Cita
     
     required init?(coder: NSCoder) {
