@@ -20,22 +20,22 @@
                                 <rect key="frame" x="76" y="198" width="240" height="158"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BME-ru-KTL">
-                                        <rect key="frame" x="83" y="52" width="75" height="68.666666666666671"/>
+                                        <rect key="frame" x="68" y="53" width="104.33333333333331" height="68.666666666666671"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcG-Bd-zIS">
-                                                <rect key="frame" x="0.0" y="0.0" width="75" height="34.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="104.33333333333333" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Ver Cita"/>
                                                 <connections>
                                                     <segue destination="i4G-gk-RIf" kind="presentation" modalPresentationStyle="fullScreen" id="d0C-1z-2d5"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTZ-NU-HbF">
-                                                <rect key="frame" x="0.0" y="34.333333333333343" width="75" height="34.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="34.333333333333343" width="104.33333333333333" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Nueva cita"/>
                                                 <connections>
-                                                    <segue destination="5Fg-8z-vLD" kind="show" id="4nv-ZI-3vx"/>
+                                                    <segue destination="AFt-e8-iJL" kind="show" id="8J1-yZ-U6q"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -62,6 +62,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I3i-dR-ga0" secondAttribute="trailing" constant="77" id="vdU-Ro-fmd"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="OKW-YJ-fxh"/>
                     <connections>
                         <outlet property="labelcito" destination="Ejb-AX-lXd" id="naz-cO-rlx"/>
                     </connections>
@@ -75,7 +76,7 @@
             <objects>
                 <viewController id="i4G-gk-RIf" customClass="ControladorPantallaCitas" customModule="boceto_1_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MRc-MX-i5A">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fK5-Ic-GM9">
@@ -92,13 +93,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3z-6j-f12">
-                                <rect key="frame" x="38" y="98" width="75" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROo-vJ-5oF">
+                                <rect key="frame" x="16" y="84" width="72" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Volver"/>
                                 <connections>
-                                    <segue destination="0X2-Pt-H0e" kind="unwind" unwindAction="volver_a_la_pantalla_inicioWithSegue:" id="aap-Yk-Qjs"/>
+                                    <segue destination="8n9-Wh-Mcj" kind="unwind" unwindAction="voler_a_pantalla_inicioWithSegue:" id="aJq-rf-QTy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -112,81 +113,70 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lmY-GK-48v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="0X2-Pt-H0e" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="756.48854961832058" y="3.5211267605633805"/>
         </scene>
-        <!--Controlador Generador Cita-->
-        <scene sceneID="RGs-Rg-eoH">
+        <!--Controlador Pantalla Agregar Cita-->
+        <scene sceneID="tyR-kf-eGY">
             <objects>
-                <viewController id="5Fg-8z-vLD" customClass="ControladorGeneradorCita" customModule="boceto_1_1" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dvf-Dj-GyW">
+                <viewController id="AFt-e8-iJL" customClass="ControladorPantallaAgregarCita" customModule="boceto_1_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NAp-X3-eAy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0GI-h0-kIh">
-                                <rect key="frame" x="60" y="50" width="75" height="35"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YdG-l5-0fa">
+                                <rect key="frame" x="124" y="266" width="144" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bKZ-GQ-vjf">
+                                <rect key="frame" x="124" y="231" width="144" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQ0-lX-emY">
+                                <rect key="frame" x="159" y="340" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
-                                    <segue destination="7cM-Ed-UhZ" kind="unwind" unwindAction="volver_a_la_pantalla_inicioWithSegue:" id="wAl-C8-ChL"/>
+                                    <action selector="agregar_cita_nueva:" destination="AFt-e8-iJL" eventType="touchUpInside" id="s7Q-Za-vSt"/>
+                                    <segue destination="i4G-gk-RIf" kind="presentation" identifier="irAPantallaCitas" id="dfj-l4-74e"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L0G-Ls-jXd">
-                                <rect key="frame" x="76" y="191" width="241" height="128"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oNS-NT-WnN">
-                                        <rect key="frame" x="72" y="8" width="97" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DyN-Wu-dWl">
-                                        <rect key="frame" x="72" y="72" width="97" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmo-D5-LWE">
-                                <rect key="frame" x="159" y="343" width="75" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jF9-lL-dcT">
+                                <rect key="frame" x="27" y="20" width="72" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Volver"/>
                                 <connections>
-                                    <action selector="agregar_cita_nueva:" destination="5Fg-8z-vLD" eventType="touchUpInside" id="um0-ak-IZX"/>
+                                    <segue destination="8n9-Wh-Mcj" kind="unwind" unwindAction="voler_a_pantalla_inicioWithSegue:" id="4l0-ii-1ot"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="WGR-4p-far"/>
-                        <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="mmo-D5-LWE" firstAttribute="centerX" secondItem="WGR-4p-far" secondAttribute="centerX" id="JwQ-ze-whG"/>
-                            <constraint firstItem="L0G-Ls-jXd" firstAttribute="leading" secondItem="WGR-4p-far" secondAttribute="leading" constant="76" id="PYy-ep-JAv"/>
-                            <constraint firstItem="L0G-Ls-jXd" firstAttribute="centerX" secondItem="WGR-4p-far" secondAttribute="centerX" id="U4R-an-tHh"/>
-                            <constraint firstItem="0GI-h0-kIh" firstAttribute="leading" secondItem="WGR-4p-far" secondAttribute="leading" constant="60" id="WUa-D7-bs9"/>
-                            <constraint firstItem="0GI-h0-kIh" firstAttribute="top" secondItem="WGR-4p-far" secondAttribute="top" constant="50" id="a1u-fj-3WA"/>
-                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uvI-0b-fCy"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="cvn-HV-DGd"/>
+                    <navigationItem key="navigationItem" id="SC8-NE-x5b"/>
                     <connections>
-                        <outlet property="que_es_lo_que_dijo" destination="DyN-Wu-dWl" id="51F-DQ-U6g"/>
-                        <outlet property="quien_lo_dijo_view" destination="oNS-NT-WnN" id="6be-Wm-Zhx"/>
+                        <outlet property="que_es_lo_que_dijo" destination="bKZ-GQ-vjf" id="akM-mB-EP3"/>
+                        <outlet property="quien_lo_dijo_view" destination="YdG-l5-0fa" id="SV9-nS-cgk"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kSL-Ly-OuD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="7cM-Ed-UhZ" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4xM-Tb-sSY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="8n9-Wh-Mcj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="62" y="704"/>
+            <point key="canvasLocation" x="42" y="744"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dfj-l4-74e"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="viewFlipsideBackgroundColor">
-            <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

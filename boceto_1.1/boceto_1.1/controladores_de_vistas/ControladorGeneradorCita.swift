@@ -13,15 +13,37 @@ class ControladorPantallaAgregarCita: UIViewController{
     
     var cita_creada: Cita? = nil
     
+   
     @IBOutlet weak var quien_lo_dijo_view: UITextField!
-    
     
     @IBOutlet weak var que_es_lo_que_dijo: UITextField!
     
-    @IBAction func agregar_cita_nueva(_ sender: UIButton) {
-        cita_creada = Cita(quien_lo_dijo: quien_lo_dijo_view.text!,
-                           que_dijo: que_es_lo_que_dijo.text!)
-    }
+    
+    @IBAction func agregar_cita_nueva(_ sender: Any) {
+        if let quienLoDijo = quien_lo_dijo_view.text, !quienLoDijo.isEmpty,
+              let queDijo = que_es_lo_que_dijo.text, !queDijo.isEmpty {
+               cita_creada = Cita(quien_lo_dijo: quienLoDijo, que_dijo: queDijo)
+               performSegue(withIdentifier: "irAPantallaCitas", sender: self)
+           } else {
+               mostrar_alerta_error()
+           }
+       }
+    func mostrar_alerta_error() {
+                let alerta = UIAlertController(title: "Error", message: "Los campos no pueden estar vacíos.", preferredStyle: .alert)
+                alerta.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                present(alerta, animated: true, completion: nil)
+            }
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+               if segue.identifier == "irAPantallaCitas" {
+                   if let destinoVC = segue.destination as? ControladorPantallaCitas {
+                       if let cita = cita_creada {
+                           destinoVC.cita_actual = cita
+                       }
+                   }
+               }
+           }
+    
+  
     
     
     override func viewDidLoad() {
