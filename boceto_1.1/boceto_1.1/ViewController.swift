@@ -24,7 +24,6 @@ class ViewController: UIViewController {
     }
     
     func actualizar_cantidad(){
-        labelcito.text = String(citas_disponibles.citas_creadas.count)
     }
     
     
