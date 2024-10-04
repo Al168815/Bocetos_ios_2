@@ -29,22 +29,17 @@ class ViewController: UIViewController {
     
     
     @IBSegueAction func al_abrir_pantalla_citas(_ coder: NSCoder) -> ControladorPantallaCitas? {
-        return ControladorPantallaCitas(cita_para_citar: citas_disponibles.obtener_cita_aleatoria()
-                                        , coder: coder)
+        let citas = citas_disponibles.citas_creadas
+        let destinoVC = ControladorPantallaCitas(coder: coder)!
+        destinoVC.citas = citas // Pasa todas las citas al controlador
+        return destinoVC
     }
+
     
     
-    @IBAction func voler_a_pantalla_inicio(segue: UIStoryboardSegue){
-        if let pantalla_agregar_citas = segue.source as? ControladorPantallaAgregarCita {
-            if let nuevaCita = pantalla_agregar_citas.cita_creada {
-                citas_disponibles.agregar_cita(nuevaCita)
-                actualizar_cantidad()  // Llama a este método aquí
-            }
-            
-            
-            actualizar_cantidad()
-            
-        }
+    @IBAction func volver_a_pantalla_inicio(segue: UIStoryboardSegue) {
+        
+    }
         
         /*@IBAction func regresar(segue: UIStoryboardSegue){
          print("En esto del proceso")
@@ -54,4 +49,4 @@ class ViewController: UIViewController {
          }*/
         
     }
-}
+

@@ -19,6 +19,7 @@
 		FB11E8302CA46CED00E94917 /* ControladorPantallaCitas.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11E82F2CA46CED00E94917 /* ControladorPantallaCitas.swift */; };
 		FB11E8322CA46D9700E94917 /* Cita.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11E8312CA46D9700E94917 /* Cita.swift */; };
 		FB11E8342CA46DD100E94917 /* generador_de_citas.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11E8332CA46DD100E94917 /* generador_de_citas.swift */; };
+		FB67EE472CB0418E00CF98C4 /* CitasStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB67EE462CB0418E00CF98C4 /* CitasStorage.swift */; };
 		FBA23B252CA70E4D000340EF /* ControladorGeneradorCita.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA23B242CA70E4D000340EF /* ControladorGeneradorCita.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		FB11E82F2CA46CED00E94917 /* ControladorPantallaCitas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControladorPantallaCitas.swift; sourceTree = "<group>"; };
 		FB11E8312CA46D9700E94917 /* Cita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cita.swift; sourceTree = "<group>"; };
 		FB11E8332CA46DD100E94917 /* generador_de_citas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generador_de_citas.swift; sourceTree = "<group>"; };
+		FB67EE462CB0418E00CF98C4 /* CitasStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitasStorage.swift; sourceTree = "<group>"; };
 		FBA23B242CA70E4D000340EF /* ControladorGeneradorCita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControladorGeneradorCita.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				FB11E8332CA46DD100E94917 /* generador_de_citas.swift */,
+				FB67EE462CB0418E00CF98C4 /* CitasStorage.swift */,
 			);
 			path = controlador;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				FBA23B252CA70E4D000340EF /* ControladorGeneradorCita.swift in Sources */,
 				FB11E8302CA46CED00E94917 /* ControladorPantallaCitas.swift in Sources */,
 				FB11E7FD2CA46BC600E94917 /* AppDelegate.swift in Sources */,
+				FB67EE472CB0418E00CF98C4 /* CitasStorage.swift in Sources */,
 				FB11E7FF2CA46BC600E94917 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

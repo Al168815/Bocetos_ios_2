@@ -1,44 +1,29 @@
-//
-//  File.swift
-//  boceto_1.1
-//
-//  Created by alumno on 9/25/24.
-//
-
 import UIKit
-
 
 class ControladorPantallaCitas: UIViewController {
     @IBOutlet weak var nombre_de_quien_lo_dijo: UILabel!
     @IBOutlet weak var que_dijo_muro_texto: UILabel!
+    @IBOutlet weak var citasLabel: UILabel! // Etiqueta para mostrar el mensaje de citas
     
-
-    var cita_actual: Cita
-    
-    required init?(coder: NSCoder) {
-    
-        self.cita_actual = Cita(quien_lo_dijo: "Desarrollador", que_dijo: "Tenemos un problema. Reportalo por una rebanada de pastel")
-        super.init(coder: coder)
-        print("Error: Se ha cargado el default de INIT")
-    }
-    
-    init?(cita_para_citar: Cita, coder: NSCoder){
-        self.cita_actual = cita_para_citar
-        super.init(coder: coder)
-    }
-    
-    
+    // Propiedad para almacenar citas
+    var citas: [Cita] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         inicializar_pantalla()
     }
     
-    func inicializar_pantalla(){
-        nombre_de_quien_lo_dijo.text = cita_actual.nombre
-        que_dijo_muro_texto.text = cita_actual.texto
+    func inicializar_pantalla() {
+        let citas = CitasStorage.shared.citas // Accede a las citas almacenadas
+        
+        if citas.isEmpty {
+            citasLabel.text = "No hay citas disponibles."
+            nombre_de_quien_lo_dijo.text = ""
+            que_dijo_muro_texto.text = ""
+        } else {
+            let cita = citas.randomElement()!
+            nombre_de_quien_lo_dijo.text = cita.nombre
+            que_dijo_muro_texto.text = cita.texto
+        }
     }
-
-    
 }

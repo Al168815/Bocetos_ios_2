@@ -20,7 +20,7 @@
                                 <rect key="frame" x="76" y="198" width="240" height="158"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BME-ru-KTL">
-                                        <rect key="frame" x="68" y="53" width="104.33333333333331" height="68.666666666666671"/>
+                                        <rect key="frame" x="68" y="53.000000000000007" width="104.33333333333331" height="68.666666666666686"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcG-Bd-zIS">
                                                 <rect key="frame" x="0.0" y="0.0" width="104.33333333333333" height="34.333333333333336"/>
@@ -99,20 +99,29 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Volver"/>
                                 <connections>
-                                    <segue destination="8n9-Wh-Mcj" kind="unwind" unwindAction="voler_a_pantalla_inicioWithSegue:" id="aJq-rf-QTy"/>
+                                    <segue destination="jcK-KD-Mnh" kind="unwind" unwindAction="volver_a_pantalla_inicioWithSegue:" id="Rl5-CS-je7"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naS-wl-p4N">
+                                <rect key="frame" x="111" y="168" width="152" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="I5C-6k-FdU"/>
                         <color key="backgroundColor" red="1" green="0.95414798450000005" blue="0.96344758279999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="ndy-yX-xtf"/>
                     <connections>
+                        <outlet property="citasLabel" destination="naS-wl-p4N" id="TSA-d5-Syz"/>
                         <outlet property="nombre_de_quien_lo_dijo" destination="fK5-Ic-GM9" id="mDS-BG-4lT"/>
                         <outlet property="que_dijo_muro_texto" destination="wXI-tR-I49" id="BU1-GE-ESV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lmY-GK-48v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="jcK-KD-Mnh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="756.48854961832058" y="3.5211267605633805"/>
         </scene>
@@ -152,7 +161,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Volver"/>
                                 <connections>
-                                    <segue destination="8n9-Wh-Mcj" kind="unwind" unwindAction="voler_a_pantalla_inicioWithSegue:" id="4l0-ii-1ot"/>
+                                    <segue destination="8n9-Wh-Mcj" kind="unwind" unwindAction="volver_a_pantalla_inicioWithSegue:" id="NlB-vK-kV0"/>
                                 </connections>
                             </button>
                         </subviews>
