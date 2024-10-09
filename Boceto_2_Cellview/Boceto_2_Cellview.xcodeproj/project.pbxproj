@@ -17,6 +17,7 @@
 		FB7D7A7B2CB433B400E7634E /* Boceto_2_CellviewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7D7A7A2CB433B400E7634E /* Boceto_2_CellviewUITestsLaunchTests.swift */; };
 		FB7D7A8A2CB4375A00E7634E /* ControladorPantallaPrincipalDeColeccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7D7A892CB4375A00E7634E /* ControladorPantallaPrincipalDeColeccion.swift */; };
 		FB7D7A8C2CB43D3100E7634E /* VistaDeZelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7D7A8B2CB43D3100E7634E /* VistaDeZelda.swift */; };
+		FB849C9A2CB6D7D500A9904B /* posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB849C992CB6D7D500A9904B /* posts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		FB7D7A7A2CB433B400E7634E /* Boceto_2_CellviewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boceto_2_CellviewUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FB7D7A892CB4375A00E7634E /* ControladorPantallaPrincipalDeColeccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControladorPantallaPrincipalDeColeccion.swift; sourceTree = "<group>"; };
 		FB7D7A8B2CB43D3100E7634E /* VistaDeZelda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaDeZelda.swift; sourceTree = "<group>"; };
+		FB849C992CB6D7D500A9904B /* posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = posts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		FB7D7A562CB433B400E7634E /* Boceto_2_Cellview */ = {
 			isa = PBXGroup;
 			children = (
+				FB849C962CB6D6C200A9904B /* Modelos */,
 				FB7D7A872CB436BA00E7634E /* controladores_de_pantallas */,
 				FB7D7A572CB433B400E7634E /* AppDelegate.swift */,
 				FB7D7A592CB433B400E7634E /* SceneDelegate.swift */,
@@ -144,6 +147,14 @@
 				FB7D7A8B2CB43D3100E7634E /* VistaDeZelda.swift */,
 			);
 			path = vista_de_celdas;
+			sourceTree = "<group>";
+		};
+		FB849C962CB6D6C200A9904B /* Modelos */ = {
+			isa = PBXGroup;
+			children = (
+				FB849C992CB6D7D500A9904B /* posts.swift */,
+			);
+			path = Modelos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +290,7 @@
 			files = (
 				FB7D7A582CB433B400E7634E /* AppDelegate.swift in Sources */,
 				FB7D7A5A2CB433B400E7634E /* SceneDelegate.swift in Sources */,
+				FB849C9A2CB6D7D500A9904B /* posts.swift in Sources */,
 				FB7D7A8C2CB43D3100E7634E /* VistaDeZelda.swift in Sources */,
 				FB7D7A8A2CB4375A00E7634E /* ControladorPantallaPrincipalDeColeccion.swift in Sources */,
 			);
